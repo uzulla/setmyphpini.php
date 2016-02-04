@@ -19,7 +19,7 @@ if (!file_exists($config_dir) || filetype($config_dir) !== 'dir') {
 }
 
 // iniファイルを選ぶ、ユーザー定義のiniがなければ、ini.sampleをつかう
-$ini_file_path = find_my_ini([PHP_MAJOR_VERSION, PHP_MINOR_VERSION, PHP_RELEASE_VERSION]);
+$ini_file_path = find_my_ini(array(PHP_MAJOR_VERSION, PHP_MINOR_VERSION, PHP_RELEASE_VERSION));
 
 if ($ini_file_path === false) {
     echo "PHP version is ".PHP_MAJOR_VERSION .".". PHP_MINOR_VERSION .".". PHP_RELEASE_VERSION.
